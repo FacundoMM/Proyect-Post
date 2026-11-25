@@ -1,0 +1,8 @@
+{
+  "name": "jd-ventas-heroku-backend",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm --prefix backend install",
+    "start": "npm --prefix backend start"
+  }
+}
