@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f3ecde;
+  --foreground: #1d1711;
+  --muted: #6d6457;
+  --surface: rgba(255, 248, 238, 0.82);
+  --surface-strong: #fffaf0;
+  --border: rgba(115, 92, 67, 0.18);
+  --accent: #d96d3a;
+  --accent-strong: #a6481b;
+  --success: #285b46;
+  --danger: #a33f3f;
+  --shadow: 0 30px 80px -40px rgba(71, 43, 20, 0.45);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --font-sans: "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-mono: "Consolas", "SFMono-Regular", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #971b1b;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  background-image:
+    radial-gradient(circle at top left, rgba(235, 165, 102, 0.34), transparent 32%),
+    radial-gradient(circle at 85% 15%, rgba(128, 160, 101, 0.18), transparent 24%),
+    linear-gradient(180deg, #f7f0e4 0%, #f1e8d8 48%, #eee3cf 100%);
+}
+
+html {
+  scroll-padding-top: 88px;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+::selection {
+  background: rgba(217, 109, 58, 0.22);
+}
+
+.panel-shadow {
+  box-shadow: var(--shadow);
 }
