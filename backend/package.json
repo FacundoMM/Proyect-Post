@@ -2,12 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "db:check": "node scripts/db-check.js",
-    "dev": "node --watch src/index.js",
-    "postinstall": "prisma generate",
-    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,11 +14,9 @@
   "dependencies": {
     "@prisma/adapter-pg": "^7.7.0",
     "@prisma/client": "^7.7.0",
-    "@supabase/supabase-js": "^2.119.2",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "multer": "^2.5.0",
     "pg": "^8.20.0"
   },
   "devDependencies": {
